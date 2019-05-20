@@ -1,6 +1,6 @@
 package com.retailmenot.stipton.androidbootcamp2019.data
 
-data class Story(
+data class Article(
    val title: String,
    val description: String,
    val content: String,

@@ -4,12 +4,12 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.retailmenot.stipton.androidbootcamp2019.data.Source
-import com.retailmenot.stipton.androidbootcamp2019.data.Story
+import com.retailmenot.stipton.androidbootcamp2019.data.Article
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    val story = Story(
+    val article = Article(
         title = "Bitcoin Price Hits All-Time Highs in These Countries, Thanks to Crippling Fiat Currencies",
         description = "By CCN: If you thought bitcoin’s recovery to $8,000 was impressive, take a look at these charts below. While most traders are focused on bitcoin’s price in dollars, the recent surge has propelled bitcoin to all-time highs in Argentina and Sudan’s local curren…",
         content = "By CCN: If you thought bitcoins recovery to $8,000 was impressive, take a look at these charts below. While most traders are focused on bitcoins price in dollars, the recent surge has propelled bitcoin to all-time highs in Argentina and Sudans local currencie… [+3983 chars]",
@@ -26,14 +26,14 @@ class MainActivity : AppCompatActivity() {
         // inflate layout
         setContentView(R.layout.activity_main)
 
-        title_text.text = story.title
+        title_text.text = article.title
         // todo bind text data to other views
 
         // load image behind url and bind to ImageView using glide library
         Glide.with(this)
-            .load(story.urlToImage)
+            .load(article.urlToImage)
             .into(story_image)
 
-        // todo launch an intent to open url in browser
+        // todo launch an intent to open url in browser when the image is clicked
     }
 }
